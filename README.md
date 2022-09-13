@@ -16,13 +16,13 @@ The aim here is to recognize the legends on coins from the ancient Roman Imperia
 * After this step, you could get all processed images (Strip images) and save them in the corresponding folders separately in `Coin_Samples`. They will be used in next step of OCR.
  * Example of processed image (Strip image): 
  
- ![Strip image of toulouse_1_1](OCR-preprocessing/OCR-preprocessing/Coin_Samples/toulouse_coins_1_obverse//toulouse_1_1_obverse.jpg "The preprocessed image of toulouse_1_1 obverse coin ")
+ ![Strip image of toulouse_1_1_obverse](OCR-preprocessing/OCR-preprocessing/Coin_Samples/toulouse_coins_1_obverse//toulouse_1_1_obverse.jpg "The preprocessed image of toulouse_1_1 obverse coin ")
  
 * The adopted algorithm is placed in `Algorithm`. For more detailed information, please refer to: [Algorithm](https://github.com/GreenIron/Recoinition "link for detailed algorithm")
  
  ### Step-3 Do OCR and the error evaluation metrics.
  * Highly recommended to open `OCR_Metrics_CER_WER_Colab` in `Jupyter Notebook`.
- * ！It 
+ * :bangbang: Since the some coins do not have the mint mark part. So the reference text(*ref_txt) is empty. However, in the process of calculating the error rate, the reference text cannot be empty, otherwise an error will be reported. Therefore, the blank reference text in excel should be deleted before performing OCR.
  * In this step, it allows to get the OCR results and re-evaluate the algorithm used (filter) for preprocessing in Step-2.
  * Since there are many factors that affect the results. In order to improve the recognition accuracy, here, we test the following two factors and compare their results.
   * Page segmentation mode (psg) provided by Pytesseract itself.
