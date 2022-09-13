@@ -1,12 +1,12 @@
 # OCR-ancient-coin-legend-recognition
-`OCR` `Reading coin legend` `OCR evaluation metrics` 
+`OCR` `Reading coin legends` `OCR evaluation metrics` 
 ## 1. What is it for？
-The aim here is to recognize the legends on coins from the ancient Roman Imperial period which includes the obverse and reverse legends as well as the mint mark on the bottom of reverse. Also, a metric to evaluate the recognition results has been given.
+The aim here is to recognize the legends on coins from the ancient Roman Imperial period which includes the obverse and reverse legends as well as the mint mark on the bottom of reverse. Also, metrics to evaluate the recognition results have been given.
 
 ## 2. How to make it work?
  Code here consists of three main steps:
 
-### Step-1 Stitch the obverse and reverse coin pictures on one picture as the input.
+### Step-1 Stitch the obverse and reverse coin pictures on one picture as input.
 * Run `stitch_two_images.py` file in `OCR_preprocessing` folder. Then, you could get the image, for example, below:
 
 ![toulouse_1_1](OCR-preprocessing/OCR-preprocessing/Coin_Samples/toulouse_coins_1/toulouse_1_1.jpg "The obeverse and reverse coin images after being stitched")
@@ -22,13 +22,13 @@ The aim here is to recognize the legends on coins from the ancient Roman Imperia
  
  ### Step-3 Do OCR and the error evaluation metrics.
  * Highly recommended to open `OCR_Metrics_CER_WER_Colab` in `Jupyter Notebook`.
- * :bangbang: Since the some coins do not have the mint mark part. So the reference text(*ref_txt) is empty. However, in the process of calculating the error rate, the reference text cannot be empty, otherwise an error will be reported. Therefore, the blank reference text in excel should be deleted before performing OCR.
+ * :bangbang: Since the some coins do not have the mint mark part. So the reference text(*ref_txt) is empty. However, in the process of calculating the error rate(CER and WER), the reference text cannot be empty, otherwise an error will be reported. Therefore, the blank reference text in excel should be deleted before performing OCR.
  * In this step, it allows to get the OCR results and re-evaluate the algorithm used (filter) for preprocessing in Step-2.
  * Since there are many factors that affect the results. In order to improve the recognition accuracy, here, we test the following two factors and compare their results.
   * Page segmentation mode (psg) provided by Pytesseract itself.
    * test with psg = 6/7/8/10 respectively.
   * Language package used.
-   * test with the original Latin language package provided `Pytesseract`. Download from here [Lain Language](https://github.com/tesseract-ocr/tessdata "link for downloading Latin language package") and store it under 'tessdata' folder in your `Pytesserat` .
+   * test with the original Latin language package provided by `Pytesseract`. Download it from here [Lain Language](https://github.com/tesseract-ocr/tessdata "link for downloading Latin language package") and store it under `tessdata` folder in your `Pytesserat` .
    * test with custom Latin language package. The method to add the custom language package, see: [Method to add custom language](https://vovaprivalov.medium.com/tesseract-ocr-tips-custom-dictionary-to-improve-ocr-d2b9cd17850b "link for adding custom language")
    
  ## 3. Environments and packages used
@@ -42,9 +42,9 @@ The aim here is to recognize the legends on coins from the ancient Roman Imperia
   - [ ] Pytessract
   - [ ] Fastwer: install in this way: [Fastwer installation method](https://github.com/kahne/fastwer "link for installing Fastwer")
 
-## 4. What to do to improve the recogition accuracy in the future?
+## 4. What to do to improve the recognition accuracy in the future?
 * Change the filtering parameters in `Algorithm`.
-* Cut and extract samples of each letter and train them to form new language package.
+* Cut and extract samples of each letter and train them to form a new language package.
 
  
  
