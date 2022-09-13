@@ -22,7 +22,7 @@ The aim here is to recognize the legends on coins from the ancient Roman Imperia
  
  ### Step-3 Do OCR and the error evaluation metrics.
  * Highly recommended to open `OCR_Metrics_CER_WER_Colab` in `Jupyter Notebook`.
- * :bangbang: Since the some coins do not have the mint mark part. So the reference text(*ref_txt) is empty. However, in the process of calculating the error rate(CER and WER), the reference text cannot be empty, otherwise an error will be reported. Therefore, the blank reference text in excel should be deleted before performing OCR.
+ * :bangbang: Since the some coins do not have the mint mark part. So the reference text(*ref_txt) is empty. However, in the process of calculating the error rate(CER and WER), the reference text cannot be empty, otherwise an error will be reported. Therefore, the blank work cells for reference text in excel should be deleted before performing OCR.
  * In this step, it allows to get the OCR results and re-evaluate the algorithm used (filter) for preprocessing in Step-2.
  * Since there are many factors that affect the results. In order to improve the recognition accuracy, here, we test the following two factors and compare their results.
    - Page segmentation mode (psg) provided by Pytesseract itself.
