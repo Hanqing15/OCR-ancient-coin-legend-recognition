@@ -39,7 +39,7 @@ The aim here is to recognize the legends on coins from the ancient Roman Imperia
  
  * Step-3 in `Juyter Notebook`:
   - [ ] Openpyxl
-  - [ ] Pytessract
+  - [ ] Pytessract: Version 4.0 or higher
   - [ ] Fastwer: install in this way: [Fastwer installation method](https://github.com/kahne/fastwer "link for installing Fastwer")
 
 ## 4. What to do to improve the recognition accuracy in the future?
